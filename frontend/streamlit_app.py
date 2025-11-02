@@ -7,7 +7,7 @@ from io import BytesIO
 API_BASE = "http://localhost:8000/api"
 
 st.set_page_config(page_title="AI Knowledge Base", page_icon="🧠", layout="wide")
-st.title("🧠 AI-Powered Knowledge Base Search & Enrichment")
+st.title("AI-Powered Knowledge Base Search & Enrichment")
 
 session_defaults = {
     "last_query": None,
@@ -63,13 +63,12 @@ data = st.session_state.get("query_result")
 last_query = st.session_state.get("last_query")
 
 if data:
-    st.markdown("### 🧩 Answer")
+    st.markdown("### Answer")
     st.write(data.get("answer", "No answer generated."))
 
     st.markdown("### 🔍 Completeness Check")
     completeness = data.get("completeness", "N/A")
-    color = "🟢" if completeness == "HIGH" else "🟠" if completeness == "MEDIUM" else "🔴"
-    st.write(f"{color} **{completeness}**")
+    st.write(f"**{completeness}**")
 
     if data.get("missing_info"):
         st.markdown("**Missing Info:**")
@@ -77,17 +76,17 @@ if data:
             st.markdown(f"- {info}")
 
     if data.get("enrichment_actions"):
-        st.markdown("### 💡 Suggested Enrichment Actions")
+        st.markdown("### Suggested Enrichment Actions")
         for e in data["enrichment_actions"]:
             st.markdown(f"- `{e['type']}` → {e['label']}")
 
     if data.get("auto_fetched_data"):
-        st.markdown("### 🌐 Auto-Fetched Data")
+        st.markdown("### Auto-Fetched Data")
         for f in data["auto_fetched_data"]:
             st.markdown(f"- **{f['query']}**: {f['data']}")
 
     st.markdown("---")
-    st.markdown("### ❤️ Rate this Answer")
+    st.markdown("### Rate this Answer")
     col1, col2 = st.columns(2)
 
     like_clicked = col1.button("👍 Like", key="like_btn")
