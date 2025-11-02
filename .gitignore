@@ -5,5 +5,4 @@ __pycache__/
 venv/
 .env
 .vscode/
-data/uploads/
-data/qdrant/
+data

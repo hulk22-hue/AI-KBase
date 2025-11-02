@@ -10,3 +10,6 @@ python-dotenv
 tiktoken
 pdfplumber
 docx2txt
+ollama
+requests
+streamlit
