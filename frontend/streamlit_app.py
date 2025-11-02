@@ -66,7 +66,7 @@ if data:
     st.markdown("### Answer")
     st.write(data.get("answer", "No answer generated."))
 
-    st.markdown("### 🔍 Completeness Check")
+    st.markdown("### Completeness Check")
     completeness = data.get("completeness", "N/A")
     st.write(f"**{completeness}**")
 
