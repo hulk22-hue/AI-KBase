@@ -58,7 +58,7 @@ Users can:
 
 | Area | Decision | Reason |
 |------|-----------|--------|
-| **LLM Runtime** | Local **Ollama** (default `llama3`) | 100 % offline, avoids API keys |
+| **LLM Runtime** | Local **Ollama** (default `phi3`) | 100 % offline, avoids API keys |
 | **Framework** | **FastAPI** for orchestration | Lightweight, async, well-documented |
 | **Embedding Model** | `sentence-transformers/all-MiniLM-L6-v2` | Fast, 384-dim vector size, fits 8 GB RAM |
 | **Vector Store** | **Qdrant** (local mode) | High-performance, easy integration |
